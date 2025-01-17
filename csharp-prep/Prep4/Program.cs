@@ -32,7 +32,7 @@ class Program
         float total = 0;
         float average = 0;
         float maximum = 0;
-        float minimum = 0;
+        // float minimum = 0;
 
         for (int i=0; i<numbers.Count; i++)
         {
@@ -40,16 +40,16 @@ class Program
             average = total/numbers.Count;
             maximum = numbers.Max();
             
-            if (numbers[i] > 0)
-            {
-                minimum = numbers.Min();
-            }
+            // if (numbers[i] > 0)
+            // {
+            //     minimum = numbers.Min();
+            // }
 
             Console.WriteLine(numbers[i]);
         }
         Console.WriteLine($"The sum is: {total}");
         Console.WriteLine($"The average is : {average}");
         Console.WriteLine($"The maximum value is: {maximum}");
-        Console.WriteLine($"The smallest positive number is:{minimum}");
+        // Console.WriteLine($"The smallest positive number is:{minimum}");
     }
 }
