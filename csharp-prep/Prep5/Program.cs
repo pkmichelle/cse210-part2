@@ -10,7 +10,7 @@ class Program
             string name = PromptUserName();
             int number = PromptUserNumber();
             string result = $"{name}, the square of your number is {SquareNumber(number)}";
-            Console.Write(result);
+            Console.WriteLine(result);
         }
 
         static void DisplayWelcome()

@@ -1,0 +1,21 @@
+// Paige Koster (Klingler)
+// CSE 210
+
+Version Control - Articulate - Assignment Week 03
+
+Your response must:
+
+Explain the meaning of Version Control
+Highlight a benefit of Version Control
+Provide an application of Version Control. This means, provide an example of how Version Control could be used.
+Show a command used in Version Control (for example a Git command)
+Thoroughly explain these concepts (this likely cannot be done in less than 100 words)
+
+// Version Control is an up-to-date system that allows several people to make changes to a program in real-time and keeps track of all changes, 
+// when they were made, and who made them. These are beneficial for numerous reasons, such as allowing one to edit the program from any location 
+// and time, making it useful for team members in different countries. An application of this would be someone in London adding a line to a 
+// program at 8 am; their team member in Boise would see this addition at 1 am simultaneously and can make and "push" another change that the 
+// person in London would see. Even though they're in different time zones and far away from each other, they can work together on the same 
+// program. To "push" code means to finalize and send code to a version control system. In this class, we use Git for our VCS. The command is 
+// simply "git push" when we are ready to send our code to our GitHub repository, which is like a folder in Git that holds our code. Mine's 
+// public, so anyone who has a link can see it. 
