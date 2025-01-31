@@ -2,7 +2,7 @@ using System.Collections.Generic;
 public class PromptGenerator
 {
    public List<string> _promptsList = new List<string>();
-   public void GetRandomPrompt()
+   public string GetRandomPrompt()
     {
         _promptsList.Add("Who was the most interesting person I interacted with today?");
         _promptsList.Add("What was the best part of my day?");
@@ -15,7 +15,7 @@ public class PromptGenerator
         int _randIndex = randomGenerator.Next(_promptsList.Count);
         string _chosenPrompt = _promptsList[_randIndex];
 
-        Console.WriteLine($"Random prompt: {_chosenPrompt}");
+        return _chosenPrompt;
 
         //yay!! I finished the random prompt generator on my own 
         // AND i understood it muahahahaha
