@@ -5,6 +5,7 @@ public class Entry
     public string _date;
     public string _response;
     public string _prompt;
+    public string _rating;
 
     public void GetResponse()
     {
@@ -23,5 +24,12 @@ public class Entry
         PromptGenerator _promptInstance = new PromptGenerator();
         _prompt = _promptInstance.GetRandomPrompt();
         Console.WriteLine($"Prompt: {_prompt}");
+    }
+
+    public void GetRating()
+    {
+        Rating _ratingInstance = new Rating();
+        _rating = _ratingInstance.GetDescription();
+        Console.WriteLine($"Day Rating: {_rating}");
     }
 }

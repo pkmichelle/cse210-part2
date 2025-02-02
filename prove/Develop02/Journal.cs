@@ -13,6 +13,7 @@ public class Journal
         _entryInstance.GetPrompt();
         _entryInstance.GetResponse();
         _entryInstance.GetDate();
+        _entryInstance.GetRating();
         
         _entriesList.Add(_entryInstance);
 
@@ -28,6 +29,7 @@ public class Journal
             Console.WriteLine($"Prompt: {entry._prompt}");
             Console.WriteLine($"Response: {entry._response}");
             Console.WriteLine($"Date: {entry._date}");
+            Console.WriteLine($"Rating: {entry._rating}");
             Console.WriteLine("~");
         }
     }
@@ -49,15 +51,17 @@ public class Journal
             _entryInstance._prompt = parts[0];
             _entryInstance._response = parts[1];
             _entryInstance._date = parts[2];
+            _entryInstance._rating = parts[3];
 
             Console.WriteLine($"Prompt: {_entryInstance._prompt}");
             Console.WriteLine($"Response: {_entryInstance._response}");
             Console.WriteLine($"Date: {_entryInstance._date}");
+            Console.WriteLine($"Rating: {_entryInstance._rating}");
             Console.WriteLine();
         }
     }
     
-    // SaveToFile adds to file in format prompt ~ response ~
+    // SaveToFile adds to file in format prompt ~ response ~ date
     public void SaveToFile()
     {
         Console.WriteLine("What is the name of the file you would like to save? ");
@@ -73,7 +77,7 @@ public class Journal
         {
             foreach (Entry entry in _entriesList)
             {
-                writer.WriteLine($"{entry._prompt} ~ {entry._response} ~ {entry._date}");
+                writer.WriteLine($"{entry._prompt} ~ {entry._response} ~ {entry._date} ~ {entry._rating}");
             }
         }
     }
