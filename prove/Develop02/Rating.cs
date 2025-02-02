@@ -1,5 +1,4 @@
 using System.Dynamic;
-
 public class Rating
 {
     public int _number;
@@ -67,9 +66,8 @@ public class Rating
         else
         {
             Console.WriteLine("Please select a number 1-10");
-        
-        
         }
+        
         return _description;
     }
 }

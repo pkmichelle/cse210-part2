@@ -1,5 +1,4 @@
 using System;
-
 class Program
 {
     static void Main(string[] args)
@@ -24,7 +23,6 @@ class Program
 
             string _userInput = Console.ReadLine();
             int _choice = 0;
-
             bool _validInput = false;
 
             while (!_validInput)

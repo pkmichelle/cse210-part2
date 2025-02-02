@@ -1,13 +1,10 @@
 using System.Collections.Generic;
-
 public class Journal
 {
     List<Entry> _entriesList = new List<Entry>();
 
-    // Adds entry to a list
     public void AddEntry()
     {
-
         Entry _entryInstance = new Entry();
         
         _entryInstance.GetPrompt();
@@ -16,10 +13,8 @@ public class Journal
         _entryInstance.GetRating();
         
         _entriesList.Add(_entryInstance);
-
     }
 
-    // display 
     public void DisplayEntry()
     {
         foreach (Entry entry in _entriesList)
@@ -34,7 +29,6 @@ public class Journal
         }
     }
 
-    // This looks at the file, reads it, separates it, and prints it in the way formatted below
     public void LoadToFile()
     {
         Console.WriteLine("What is the name of the file you would like to load? ");
@@ -61,7 +55,6 @@ public class Journal
         }
     }
     
-    // SaveToFile adds to file in format prompt ~ response ~ date
     public void SaveToFile()
     {
         Console.WriteLine("What is the name of the file you would like to save? ");
