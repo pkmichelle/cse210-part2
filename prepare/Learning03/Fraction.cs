@@ -49,5 +49,7 @@ public class Fraction
     public double GetDecimalValue()
     {
         return (double)_top/(double)_bottom;
+        // confused as to why I have to add the double before each variable
+        // in order to get a decimal number back?
     }
 }
