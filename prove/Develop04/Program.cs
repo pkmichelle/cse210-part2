@@ -49,3 +49,12 @@ class Program
         }
     }
 }
+
+// I added a new activity called "meditation" that guides the user through a little bit more of an extensive 
+// breathing activity and through a meditation guidance section to help the user relax. Because of the required 
+// length for meditation to fully occur, I made this activity so that it doesn't require the user to set the 
+// duration. Instead, the program periodically asks the user if they would like to continue to the next section 
+// of the meditation. 
+
+// Also, I'm pretty sure I made it so that the random questions/prompts were only chosen once in a session, 
+// but maybe I didn't; I don't remember. I am sorry.
