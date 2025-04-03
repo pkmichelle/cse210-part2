@@ -11,24 +11,27 @@ public class Customer
         _address = address;
     }
 
-    public void SetName()
-    {
-        Console.WriteLine("Name: ");
-        _name = Console.ReadLine();
-    }
-
     public string GetName()
     {
         return _name;
     }
-
-    public void GetAddress()
+    public void SetName(string name)
     {
-        _address.FormattedAddress();
+        _name = name;
     }
 
-    public void CheckCountry()
+    public Address GetAddress()
     {
-        _address.CheckCountry();
+        return _address;
+    }
+
+    public void SetAddress(Address address)
+    {
+        _address = address;
+    }
+
+    public bool CheckCountry()
+    {
+        return _address.CheckCountry();
     }
 }

@@ -13,21 +13,9 @@ public class Address
         _country = country;
     }
 
-    public void SetStreet()
-    {
-        Console.WriteLine("Enter street address: ");
-        _street = Console.ReadLine();
-    }
-
     public string GetStreet()
     {
         return _street;
-    }
-
-    public void SetCity()
-    {
-        Console.WriteLine("Enter city: ");
-        _city = Console.ReadLine();
     }
 
     public string GetCity()
@@ -35,21 +23,9 @@ public class Address
         return _city;
     }
 
-    public void SetState()
-    {
-        Console.WriteLine("Enter state: ");
-        _state = Console.ReadLine();
-    }
-
     public string GetState()
     {
         return _state;
-    }
-
-    public void SetCountry()
-    {
-        Console.WriteLine("Enter country(abbreviated): ");
-        _country = Console.ReadLine();
     }
 
     public string GetCountry()
@@ -69,10 +45,8 @@ public class Address
         }
     }
 
-    public void FormattedAddress()
+    public string FormattedAddress()
     {
-        Console.WriteLine($"{GetStreet()}");
-        Console.WriteLine($"{GetCity()}, {GetState()}");
-        Console.WriteLine($"{GetCountry()}");
+        return $"{_street}\n    {_city}, {_state}\n    {_country}";
     }
 }
