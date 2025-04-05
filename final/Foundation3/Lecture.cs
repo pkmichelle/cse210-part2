@@ -13,7 +13,7 @@ public class Lecture : Event
     public string LectureDetails()
     {
         string detail = 
-            "Event Type: Lecture\n" +
+            $"Event Type: {this.GetType().Name}\n" +
             $"Speaker: {_speakerName}\n" +
             $"Capacity: {_capacity}\n~~~~~\n";
 

@@ -27,6 +27,7 @@ class Program
             {
                 Console.WriteLine(o.OutdoorDetails());
             }
+        
 
             Console.WriteLine("Standard Details: \n");
             Console.WriteLine(e.StandardDetails());
