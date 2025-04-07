@@ -1,7 +1,7 @@
 public class Comment
 {
-    public string _name;
-    public string _text;
+    private string _name;
+    private string _text;
 
     public Comment(string name, string text)
     {
@@ -17,5 +17,10 @@ public class Comment
     public string GetText()
     {
         return _text;
+    }
+
+    public void DisplayComment()
+    {
+        Console.WriteLine($"    {_name} - {_text}");
     }
 }
