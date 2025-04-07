@@ -50,6 +50,7 @@ public class Video
         {
             comment.DisplayComment();
         }
+        
         Console.WriteLine("        --------");
     }
 }

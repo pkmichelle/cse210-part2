@@ -13,12 +13,6 @@ public class Product
         _quantity = quantity;
     }
 
-    public int TotalCost()
-    {
-        int total = _price * _quantity;
-        return total;
-    }
-
     public string GetName()
     {
         return _name;
@@ -38,4 +32,11 @@ public class Product
     {
         return _quantity;
     }
+
+    public double TotalCost()
+    {
+        double total = _price * _quantity;
+        return total;
+    }
+
 }

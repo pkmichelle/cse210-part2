@@ -1,3 +1,5 @@
+using System.Reflection.Emit;
+
 public class Order
 {
     private List<Product> _products;
@@ -9,25 +11,15 @@ public class Order
         _products = products;
     }
 
-    // public Customer GetCustomer()
-    // {
-    //     return _customer;
-    // }
-
-    // public Product GetProduct()
-    // {
-    //     return _product;
-    // }
-
-    // public Address GetAddress()
-    // {
-    //     return _address;
-    // }
-
-    public int CalculateCost()
+    public void AddProduct(Product product)
     {
-        int total = 0;
-        int shipping = 0;
+        _products.Add(product);
+    }
+
+    public double CalculateCost()
+    {
+        double total = 0;
+        double shipping = 0;
 
 
         foreach(Product product in _products)
@@ -44,23 +36,31 @@ public class Order
             shipping = 35;
         }
 
-        int totalCost = total + shipping;
+        double totalCost = total + shipping;
         return totalCost;
     }
 
-    public void PackingLabel()
+    public string PackingLabel()
     {
+        string label = "";
         Console.WriteLine("Packing Label:");
+
         foreach (Product product in _products)
         {
-            Console.WriteLine($"    {product.GetName()}; ID- {product.GetID()}; Quantity- {product.GetQuantity()}");
+            label += $"    {product.GetName()}; ID- {product.GetID()}; Quantity- {product.GetQuantity()}\n";
         }
+
+        return label;
     }
 
-    public void ShippingLabel()
+    public string ShippingLabel()
     {
+        string label = "";
         Console.WriteLine("Shipping Label:");
-        Console.WriteLine($"    {_customer.GetName()}");
-        Console.WriteLine($"    {_customer.GetAddress().FormattedAddress()}");
+
+        label = $"    {_customer.GetName()}\n" +
+                $"    {_customer.GetAddress().FormattedAddress()}";
+
+        return label;
     }
 }

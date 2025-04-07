@@ -24,15 +24,13 @@ class Program
 
         Console.WriteLine();
         Console.WriteLine("-----Order 1-----\n");
-        order1.PackingLabel();
-        Console.WriteLine();
-        order1.ShippingLabel();
+        Console.WriteLine(order1.PackingLabel());
+        Console.WriteLine(order1.ShippingLabel());
         Console.WriteLine($"\nTotal: ${order1.CalculateCost()}\n\n");
 
         Console.WriteLine("-----Order 2-----\n");
-        order2.PackingLabel();
-        Console.WriteLine();
-        order2.ShippingLabel();
+        Console.WriteLine(order2.PackingLabel());
+        Console.WriteLine(order2.ShippingLabel());
         Console.WriteLine($"\nTotal: ${order2.CalculateCost()}\n\n\n");
     }
 }
