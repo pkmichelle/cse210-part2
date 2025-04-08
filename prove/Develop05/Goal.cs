@@ -3,10 +3,9 @@ using System.Reflection.Metadata;
 
 public abstract class Goal
 {
-    protected static string _name;
-    protected static string _description;
-    protected static int _points;
-    protected static int _repetitions;
+    private string _name;
+    private string _description;
+    private int _points;
 
     public Goal(string name, string description, int points)
     {
@@ -15,35 +14,25 @@ public abstract class Goal
         _points = points;
     }
 
-    public void GetName()
+    public string GetName()
     {
-        Console.WriteLine("What is the name of the goal?");
-        _name = Console.ReadLine();
+        return _name;
     }
 
-    public void GetDescription()
+    public string GetDescription()
     {
-        Console.WriteLine("Provide a short description of your goal: ");
-        _description = Console.ReadLine();
+        return _description;
     }
 
-    public void GetPoints()
+    public virtual int GetPoints()
     {
-        Console.WriteLine("How many points is this goal worth?");
-        string _pointString = Console.ReadLine();
-        _points = int.Parse(_pointString);;
+        return _points;
     } 
-
-    public void GetReps()
+    public virtual string FormattedReference()
     {
-        Console.WriteLine("How many times does this goal need to be accomplished for a bonus? ");
-        string _repeatString = Console.ReadLine();
-        _repetitions = int.Parse(_repeatString);
+        return $"[ ] {_name} - {_description}";
     }
 
-    public string FormattedReference()
-    {
-        // formats as $"[] {_name} - {_description} - {_points}" if type is Basic or Eternal
-        // if type is Checklist $"[] {_name} - {_description} - {_points} - {_repetitions}"
-    }
+    public abstract void RecordEvent();
+    public abstract  bool IsComplete();
 }
